@@ -1,7 +1,9 @@
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(8,7,6,5,4,3);
 
-int sensorPin = A0;    // select the input pin for the potentiometer
+int voltagePin = A0;
+int currentPin = A1;
+
 float ampHours = 0;
 
 void setup() {
@@ -14,8 +16,10 @@ void setup() {
 }
 
 void loop() {
-  int sensorValue = analogRead(sensorPin);
-  float voltage = sensorValue * 5.0 / 1024;
+  // figure out how to get current and previous sample times
+  float voltage = analogRead(voltagePin) * 5.0 / 1024;
+  float current = analogRead(currentPin) * 5.0 / 1024;
+  
   Serial.print(millis());
   Serial.print(", ");
   Serial.print(voltage, DEC);
@@ -23,7 +27,6 @@ void loop() {
   lcd.setCursor(1, 1);
   lcd.print(voltage, 2);
   
-  float current = sensorValue * 5.0 / 1024 / 10;  
   Serial.print(current, DEC);
   Serial.print(", ");
   lcd.setCursor(6, 1);
