@@ -1,0 +1,43 @@
+calibration procedure
+
+apply known voltage
+use multimeter to measure voltage
+
+adjust pot on LM358 to desired current
+use multimeter in separate reading to measure current
+
+* beware of voltage drop on current measurement
+* beware of programmer cable affecting calibration
+
+record voltage and vadc
+record current and iadc
+this is V2
+
+short out voltage to get zero reading
+record voltage and vadc
+record current and iadc
+this is V1
+
+
+recent calibrations:
+
+for blue screen unit
+2 sept 2011
+3.09V 208mA
+603   34
+V2    = 1.67
+adcV2 = 316
+I2    = 0.200
+adcI2 = 37
+
+for red screen unit
+2 sept 2011
+V2    = 3.07V
+adcV2 = 629
+I2    = 0.200
+adcI2 = 42
+
+current seems to be only measurement affected by ftdi
+
+current resolution should be 5mA
+voltage resolution should be 5mA
