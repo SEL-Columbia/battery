@@ -1,5 +1,9 @@
 #include <LiquidCrystal.h>
-LiquidCrystal lcd(8,7,6,5,4,3);
+//LiquidCrystal lcd(8,7,6,5,4,3);
+
+// for sippino
+LiquidCrystal lcd(7,6,5,4,3,2);
+
 
 static unsigned long lastTime = 0;
 
