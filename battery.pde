@@ -28,6 +28,7 @@ float Igain = I2 / (adcI2 - Ioffset);
 
 void setup() {
   //delay(5000);
+  analogReference(EXTERNAL);
   Serial.begin(9600);
   lcd.begin(20,4);
   lcd.setCursor(0,0);
