@@ -41,3 +41,15 @@ current seems to be only measurement affected by ftdi
 
 current resolution should be 5mA
 voltage resolution should be 5mA
+
+
+sippino calibration
+September 24, 2011 1:02:05 PM
+int adcV2 = 607;
+int adcV1 = 0;
+float V2 = 1.45;
+float V1 = 0;
+int adcI2 = 43;
+int adcI1 = 0;
+float I2 = 0.109;
+float I1 = 0;
