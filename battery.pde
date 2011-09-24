@@ -31,7 +31,7 @@ void setup() {
   Serial.begin(9600);
   lcd.begin(20,4);
   lcd.setCursor(0,0);
-  lcd.print(" volt amp  mAh");
+  lcd.print(" volt amp   mAh");
   Serial.println("time (ms),voltage (V),current (A),charge(mAh),voltage adc, current adc");
 }
 
@@ -58,12 +58,12 @@ void loop() {
   Serial.print(current, DEC);
   Serial.print(", ");
   lcd.setCursor(6, 1);
-  lcd.print(current, 2);
+  lcd.print(current, 3);
 
   // calculate amphours based on current, thisTime, and lastTime
   ampHours += current / 3600 * (thisTime - lastTime);
   Serial.print(ampHours, DEC);
-  lcd.setCursor(11, 1);
+  lcd.setCursor(12, 1);
   lcd.print(ampHours,0);
 
   // print raw dac readings to serial
