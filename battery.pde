@@ -14,17 +14,17 @@ float ampHours = 0;
 
 // voltage calibration
 // 
-int adcV2 = 316;
+int adcV2 = 607;
 int adcV1 = 0;
-float V2 = 1.67;
+float V2 = 1.45;
 float V1 = 0;
 float Voffset = - (adcV2 - adcV1) / (V2 - V1) * V1 + adcV1;
 float Vgain = V2 / (adcV2 - Voffset);
 
 // current calibration
-int adcI2 = 37;
+int adcI2 = 43;
 int adcI1 = 0;
-float I2 = 0.200;
+float I2 = 0.109;
 float I1 = 0;
 float Ioffset = - (adcI2 - adcI1) / (I2 - I1) * I1 + adcI1;
 float Igain = I2 / (adcI2 - Ioffset);
